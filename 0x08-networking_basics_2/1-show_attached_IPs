@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Script to display all IPV4 IPS on a machine
+# Script to display all IPV4 IPS on a mach
 
-ifconfig -a | grep inet | cut -d: -f2 | cut -d" "  -f1
+ifconfig -a | grep "inet addr:" | cut -d : -f2 | awk '{print $1}'
